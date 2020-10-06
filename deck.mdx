@@ -7,9 +7,7 @@ import { github, vsDark } from "@code-surfer/themes";
 
 export const theme = github;
 
-## 🗺️ [PWA Hacktoberfest](.) 🗾
-
-PWA
+## 🗺️ [Using git for your PWA project](.) 🗾
 
 [SurabayaJS](https://surabayajs.org) 10 October 2020
 
@@ -25,8 +23,8 @@ By [FEBRIANSYAH.ID](https://febriansyah.id)
 
 # 👨‍💻 Resources 👩‍💻
 
-- This deck: [febriansyah-speak-leaflet.now.sh](https://febriansyah-speak-leaflet.now.sh/)
-- Repository: [gitlab.com/febriansyahdotid/template-speak](https://gitlab.com/febriansyahdotid/template-speak.git)
+- This deck: [pwa-hacktoberfest.netlify.app](https://pwa-hacktoberfest.netlify.app/)
+- Repository: [febriansyah-speak/pwa-hacktoberfest](https://github.com/febriansyah-speak/pwa-hacktoberfest)
 
 <Notes>
   bagi yang mau membuka slide ini saya kasih waktu untuk
@@ -78,30 +76,6 @@ By [FEBRIANSYAH.ID](https://febriansyah.id)
 
 ---
 
-# This deck is about... 👨‍💻
-
-<ul>
-  <Appear>
-    <li>...</li>
-    <li>...</li>
-    <li>...</li>
-  </Appear>
-</ul>
-
----
-
-# This deck isn't about... 🙅
-
-<ul>
-  <Appear>
-    <li>...</li>
-    <li>...</li>
-    <li>...</li>
-  </Appear>
-</ul>
-
----
-
 # Explosion! 💥
 
 <img
@@ -139,7 +113,7 @@ karena hal tsb menjadikan aplikasi berbasis electron berukuran cukup besar
 
 kalau PWA itu website biasa yang bisa bertindak selayaknya aplikasi native
 
-bisa diakses secara offline, cepat, responsif & dapat di install
+bisa diakses secara offline, cepat, responsif
 
 ---
 
@@ -249,7 +223,7 @@ Hello World
 <!-- Service Worker -->
 <script>
       if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
+        navigator.serviceWorker.register('sw.js')
           .then(function() {
                 console.log('Service Worker Registered');
           });
@@ -275,7 +249,7 @@ Hello World
 <!-- Service Worker -->
 <script>
       if('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js')
+        navigator.serviceWorker.register('sw.js')
           .then(function() {
                 console.log('Service Worker Registered');
           });
@@ -286,36 +260,14 @@ Hello World
 
 ```
 
-```js subtitle='sw.js'
-var cacheName = 'febriansyah-pwa';
-var filesToCache = [
-  '/',
-  '/index.html'
-  // masukkan semua file yang dibuat offline disini
-];
-self.addEventListener('install', function(e) {
-  console.log('[ServiceWorker] Install');
-  e.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      console.log('[ServiceWorker] Caching app shell');
-      return cache.addAll(filesToCache);
-    })
-  );
-});
-self.addEventListener('activate',  event => {
-  event.waitUntil(self.clients.claim());
-});
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request, {ignoreSearch:true}).then(response => {
-      return response || fetch(event.request);
-    })
-  );
-});
-```
-
-
 </CodeSurfer>
+
+---
+# Service Worker
+
+yarn global add workbox-cli
+
+workbox wizard
 
 ---
 
@@ -329,7 +281,25 @@ biar simpel 😁
 
 karena manifest.json panjang. lihat di repo saja ya 😁
 
+https://github.com/febriansyah-speak/pwa-hacktoberfest-website
+
 ---
+
+<img
+  src="https://raw.githubusercontent.com/febriansyah-speak/pwa-hacktoberfest/main/hs.png"
+  width="600"
+/>
+
+---
+
+<img
+  src="https://raw.githubusercontent.com/febriansyah-speak/pwa-hacktoberfest/main/splash.png"
+  width="600"
+/>
+
+---
+
+# Contribution Time
 
 yuk tambahi konten, gambar, halaman / apapun
 
@@ -339,9 +309,8 @@ kemudian Pull Request
 
 # References 💼
 
-- ...
-- ...
-- ...
+- https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
+- https://developers.google.com/web/tools/workbox/
 
 ---
 
