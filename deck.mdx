@@ -1,0 +1,352 @@
+import {
+  CodeSurfer,
+  CodeSurferColumns,
+  Step,
+} from "code-surfer";
+import { github, vsDark } from "@code-surfer/themes";
+
+export const theme = github;
+
+## 🗺️ [PWA Hacktoberfest](.) 🗾
+
+PWA
+
+[SurabayaJS](https://surabayajs.org) 10 October 2020
+
+By [FEBRIANSYAH.ID](https://febriansyah.id)
+
+[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
+
+<Notes>
+  Assalamualaikum, saya akan membawakan materi PWA
+</Notes>
+
+---
+
+# 👨‍💻 Resources 👩‍💻
+
+- This deck: [febriansyah-speak-leaflet.now.sh](https://febriansyah-speak-leaflet.now.sh/)
+- Repository: [gitlab.com/febriansyahdotid/template-speak](https://gitlab.com/febriansyahdotid/template-speak.git)
+
+<Notes>
+  bagi yang mau membuka slide ini saya kasih waktu untuk
+  membuka / memfoto
+</Notes>
+
+---
+
+# Hello there 👋
+
+<ul>
+  <Appear>
+    <li>
+      My name is{" "}
+      <b>
+        <a href="https://febriansyah.id">FEBRIANSYAH</a>
+      </b>
+    </li>
+    <li>
+      Because Febriansyah is popular name, you can call me{" "}
+      <b>FEBRIANSYAH.ID</b> 😆
+    </li>
+    <li>
+      Founder{" "}
+      <a href="https://sekai.id">
+        <b>SEKAI.ID</b>
+      </a>
+    </li>
+    <li>
+      Co-Founder{" "}
+      <a href="https://infosrk.club">
+        <b>infosrk.club (URJA)</b>
+      </a>
+    </li>
+    <li>
+      Freelance Website Developer (Use Wordpress,
+      #YangPentingCair)
+    </li>
+  </Appear>
+</ul>
+
+<Notes>
+  perkenalkan nama saya Febriansyah, karena nama Febriansyah
+  sangat yang pakai kalian bisa panggil saya Febriansyah.id,
+  saya founder sekai.id, saya co-founder infosrk.club /
+  urja, saya freelancer web developer pakai wordpress aja
+  yang penting cair :D
+</Notes>
+
+---
+
+# This deck is about... 👨‍💻
+
+<ul>
+  <Appear>
+    <li>...</li>
+    <li>...</li>
+    <li>...</li>
+  </Appear>
+</ul>
+
+---
+
+# This deck isn't about... 🙅
+
+<ul>
+  <Appear>
+    <li>...</li>
+    <li>...</li>
+    <li>...</li>
+  </Appear>
+</ul>
+
+---
+
+# Explosion! 💥
+
+<img
+  src="https://raw.githubusercontent.com/febriansyahid/GIF/master/explosion.gif"
+  width="600"
+/>
+
+###### (Kono Subarashii Sekai ni Shukufuku wo!)
+
+<Notes>yuk kita mulai!</Notes>
+
+---
+
+# Apa Itu PWA?
+
+PWA adalah website yang seakan menjadi aplikasi native
+
+---
+
+Aplikasi Web Progresif adalah aplikasi web yang menggunakan API dan fitur browser web yang muncul bersama dengan strategi peningkatan progresif tradisional untuk menghadirkan pengalaman pengguna seperti aplikasi asli ke aplikasi web lintas platform.
+
+###### https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
+
+---
+
+# Apa bedanya dengan Electron?
+
+kalau Electron sistemnya membundel nodejs & chromium
+
+karena hal tsb menjadikan aplikasi berbasis electron berukuran cukup besar
+
+###### https://www.electronjs.org/blog/electron-internals-using-node-as-a-library
+
+---
+
+kalau PWA itu website biasa yang bisa bertindak selayaknya aplikasi native
+
+bisa diakses secara offline, cepat, responsif & dapat di install
+
+---
+
+# Website bisa diakses secara offline?
+
+<img
+  src="https://raw.githubusercontent.com/febriansyahdotid/GIF/master/chino.gif"
+  width="600"
+/>
+
+###### (Gochuumon wa Usagi Desu ka?)
+
+---
+
+# Iya, beneran! ngapain saya berbohong 😂
+
+<img
+  src="https://media1.tenor.com/images/371fe825a4344bfc9ec17768c6711e4d/tenor.gif"
+  width="600"
+/>
+
+###### (Blend S)
+
+---
+
+Supaya website menjadi PWA membutuhkan 3 hal berikut
+
+- HTTPS
+- Service Worker
+- manifest.json
+
+---
+
+HTTPS saya anggap kalian semua sudah tau
+
+---
+
+# Service Worker
+
+ini yang bikin web bisa diakses secara offline
+seperti yang saya bilang di slide sebelum nya
+
+---
+
+Mereka dimaksudkan, antara lain, untuk mengaktifkan pembuatan pengalaman offline yang efektif, mencegat permintaan jaringan dan mengambil tindakan yang sesuai berdasarkan ketersediaan jaringan, dan memperbarui aset yang berada di server.
+
+###### https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API
+
+---
+
+# Manifest
+
+Manifes aplikasi web adalah bagian dari kumpulan teknologi web yang disebut aplikasi web progresif (PWA), yang merupakan situs web yang dapat dipasang ke layar utama perangkat tanpa app store
+
+###### https://developer.mozilla.org/en-US/docs/Web/Manifest
+
+---
+
+# Waktunya Ngoding!
+
+<img
+  src="https://raw.githubusercontent.com/febriansyahdotid/GIF/master/yuki2.gif"
+  width="600"
+/>
+
+###### (Suzumiya Haruhi no Yuuutsu)
+
+---
+
+Silahkan Langsung Bicara Jika Ada Pertanyaan
+
+---
+
+<CodeSurfer>
+
+```js subtitle='buat file index.html . tulis ! terus tekan Tab'
+!
+
+```
+
+```js subtitle='index.html'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+Hello World
+</body>
+</html>
+
+```
+
+```js subtitle='index.html'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+Hello World
+
+<!-- Service Worker -->
+<script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function() {
+                console.log('Service Worker Registered');
+          });
+      }
+    </script>
+</body>
+</html>
+
+```
+
+```js subtitle='index.html'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+Hello World
+
+<!-- Service Worker -->
+<script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function() {
+                console.log('Service Worker Registered');
+          });
+      }
+    </script>
+</body>
+</html>
+
+```
+
+```js subtitle='sw.js'
+var cacheName = 'febriansyah-pwa';
+var filesToCache = [
+  '/',
+  '/index.html'
+  // masukkan semua file yang dibuat offline disini
+];
+self.addEventListener('install', function(e) {
+  console.log('[ServiceWorker] Install');
+  e.waitUntil(
+    caches.open(cacheName).then(function(cache) {
+      console.log('[ServiceWorker] Caching app shell');
+      return cache.addAll(filesToCache);
+    })
+  );
+});
+self.addEventListener('activate',  event => {
+  event.waitUntil(self.clients.claim());
+});
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request, {ignoreSearch:true}).then(response => {
+      return response || fetch(event.request);
+    })
+  );
+});
+```
+
+
+</CodeSurfer>
+
+---
+
+Sekarang generate icon
+
+pakai https://www.pwabuilder.com/imageGenerator
+
+biar simpel 😁
+
+---
+
+karena manifest.json panjang. lihat di repo saja ya 😁
+
+---
+
+yuk tambahi konten, gambar, halaman / apapun
+
+kemudian Pull Request
+
+---
+
+# References 💼
+
+- ...
+- ...
+- ...
+
+---
+
+# Question Time 🙋
+
+![gif](https://raw.githubusercontent.com/febriansyahid/GIF/master/sakuraquest.gif)
+
+###### (Sakura Quest)
